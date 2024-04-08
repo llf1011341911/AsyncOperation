@@ -21,22 +21,12 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/oauth2/AsyncOperation'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/llf1011341911/AsyncOperation'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'oauth2' => 'lsl@163.com' }
-  s.source           = { :git => 'https://github.com/oauth2/AsyncOperation.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'oauth2' => '101134191@qq.com.com' }
+  s.source           = { :git => 'https://github.com/llf1011341911/AsyncOperation.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'AsyncOperation/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AsyncOperation' => ['AsyncOperation/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

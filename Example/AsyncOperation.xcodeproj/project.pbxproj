@@ -42,10 +42,10 @@
 		607FACE51AFB9204008FA782 /* AsyncOperation_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncOperation_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		76F9068D1A970524EEE83C94 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		76F9068D1A970524EEE83C94 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BE2FD05577EF3BB0BFC70EAE /* Pods-AsyncOperation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncOperation_Example.debug.xcconfig"; path = "Target Support Files/Pods-AsyncOperation_Example/Pods-AsyncOperation_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D1A3953196DD4E8CAEEA8DC6 /* AsyncOperation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AsyncOperation.podspec; path = ../AsyncOperation.podspec; sourceTree = "<group>"; };
-		ECA348478FBDE850CACA2FC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D1A3953196DD4E8CAEEA8DC6 /* AsyncOperation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AsyncOperation.podspec; path = ../AsyncOperation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ECA348478FBDE850CACA2FC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FD6466773EBA5E189BCCB1D6 /* Pods-AsyncOperation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncOperation_Tests.release.xcconfig"; path = "Target Support Files/Pods-AsyncOperation_Tests/Pods-AsyncOperation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				3293C4AEA6ABB3B2501C2B38 /* Pods-AsyncOperation_Tests.debug.xcconfig */,
 				FD6466773EBA5E189BCCB1D6 /* Pods-AsyncOperation_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
