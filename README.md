@@ -22,7 +22,7 @@ pod 'AsyncOperation'
 
 ## Author
 
-oauth2, lsl@163.com
+oauth2, edcdutvet@163.com
 
 ## License
 
