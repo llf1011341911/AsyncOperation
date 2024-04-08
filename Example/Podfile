@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'AsyncOperation_Example' do
+  pod 'AsyncOperation', :path => '../'
+
+  target 'AsyncOperation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
