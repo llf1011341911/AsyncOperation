@@ -8,7 +8,7 @@
 import Foundation
 
 public class AsyncBlockOperationQue {
-        
+    
     private var queue: OperationQueue
     private var identifiers = [String]()
     private var result: [String: Any] = [:]
@@ -21,13 +21,13 @@ public class AsyncBlockOperationQue {
     public func add(_ op: AsyncBlockOperation) {
         if op.handleResult {
             self.identifiers.append(op.identifier)
-            op.excuted = { id, result in
-                self.result[id] = result
+            op.excuted = { [weak self] id, result in
+                self?.result[id] = result
             }
         }
-        self.queue.addOperation(op)
+        queue.addOperation(op)
     }
-
+    
     public func excutedCallBack(compltion: @escaping (Any) -> ()) {
         self.queue.addBarrierBlock {
             var results = [Any?]()

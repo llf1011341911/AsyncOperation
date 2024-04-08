@@ -9,22 +9,13 @@ import Foundation
 
 open class AsyncOperation: Operation {
     
-    public enum State: String {
-        case waiting = "isWaiting"
-        case ready = "isReady"
-        case executing = "isExecuting"
-        case finished = "isFinished"
-        case cancelled = "isCancelled"
-    }
-    
     let identifier = UUID().uuidString
-
-    open var state: State = State.waiting {
+    
+    open var state: State = .waiting {
         willSet {
-            willChangeValue(forKey: State.ready.rawValue)
-            willChangeValue(forKey: State.executing.rawValue)
-            willChangeValue(forKey: State.finished.rawValue)
-            willChangeValue(forKey: State.cancelled.rawValue)
+            State.allCases.forEach { s in
+                willChangeValue(forKey: s.rawValue)
+            }
         }
         didSet {
             switch self.state {
@@ -42,14 +33,17 @@ open class AsyncOperation: Operation {
             case .cancelled:
                 break
             }
-
-            didChangeValue(forKey: State.cancelled.rawValue)
-            didChangeValue(forKey: State.finished.rawValue)
-            didChangeValue(forKey: State.executing.rawValue)
-            didChangeValue(forKey: State.ready.rawValue)
+            
+            State.allCases.forEach { s in
+                didChangeValue(forKey: s.rawValue)
+            }
         }
     }
-
+    
+    public enum State: String, CaseIterable {
+        case waiting, ready, executing, finished, cancelled
+    }
+    
     open override var isReady: Bool {
         if self.state == .waiting {
             return super.isReady
@@ -57,7 +51,7 @@ open class AsyncOperation: Operation {
             return self.state == .ready
         }
     }
-
+    
     open override var isExecuting: Bool {
         if self.state == .waiting {
             return super.isExecuting
@@ -65,7 +59,7 @@ open class AsyncOperation: Operation {
             return self.state == .executing
         }
     }
-
+    
     open override var isFinished: Bool {
         if self.state == .waiting {
             return super.isFinished
@@ -73,7 +67,7 @@ open class AsyncOperation: Operation {
             return self.state == .finished
         }
     }
-
+    
     open override var isCancelled: Bool {
         if self.state == .waiting {
             return super.isCancelled
@@ -81,7 +75,7 @@ open class AsyncOperation: Operation {
             return self.state == .cancelled
         }
     }
-
+    
     open override var isAsynchronous: Bool {
         return true
     }
